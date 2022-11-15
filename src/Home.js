@@ -8,6 +8,7 @@ import DividerOr from "./Components/DividerOr";
 import ReferalStatus from "./Components/ReferalStatus";
 import Footer from "./Components/Footer";
 
+
 const Home = () => {
   return (
     <React.Fragment>
@@ -18,7 +19,7 @@ const Home = () => {
       <SelectProgram />
       <DividerOr />
       <ReferalStatus />
-      <Footer />
+      <Footer/>            
     </React.Fragment>
   );
 };

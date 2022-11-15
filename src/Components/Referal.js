@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Promo from './Promo';
 
 const  Referal = () => {
     const [formValues, setFormValues] = useState([{ name: "", email: "" }])
@@ -43,14 +44,16 @@ const  Referal = () => {
                         }
                     </div>
                 </div>
+               
             ))}
             <div className="but btn-group ">
                 <button className="btn btn-primary" type="button" onClick={() => addFormFields()}>Add</button>
+                <Promo/>
                 <button className="btn btn-success" type="submit">Submit</button>
             </div>
         </form>
     )
-
+                        
 }
 
 export default Referal;

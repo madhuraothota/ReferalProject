@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Grid, MenuItem, FormControl, Select, Typography } from '@mui/material';
+import Form from 'react-bootstrap/Form';
 import Referal from './Referal';
 import './SelectProgram.css';
 
@@ -19,26 +19,17 @@ const SelectProgram = () => {
 
 
   return (
-    <Grid container>
-      <Grid item sm={4} xs={12}>
-        <Typography variant="h6">Select a program to refer :</Typography>
-      </Grid>
-      <Grid item sm={8} xs={12}>
-        <FormControl fullWidth requried>
-          <Box sx={{ m: 4 }}>
-            <Select
-              displayEmpty
-              value={program}
-              fullWidth
-              onChange={handleChange}
-            >
-              <MenuItem value={10}>Certiifcation Program in Full stack Development</MenuItem>
-              <MenuItem value={20}>Certiifcation Program in Business Startegy</MenuItem>
-              <MenuItem value={30}>Certiifcation Program in Digital Marketing</MenuItem>
-            </Select>
-          </Box>
-        </FormControl>
-       
+    <React.Fragment>
+    <Form.Select
+     as="select"
+     value={program}
+     onChange={handleChange}>
+      <option>select menu</option>
+      <option value="10">Certication for Full Stack Program</option>
+      <option value="20">Certification for Business Startegy</option>
+      <option value="30">Certication for Digital Marketing</option>
+    </Form.Select>
+    
 
         {
           showhide && program === 10? <Referal /> : " "
@@ -53,9 +44,7 @@ const SelectProgram = () => {
 
         }
 
-
-      </Grid>
-    </Grid>
+        </React.Fragment>
 
 
   );

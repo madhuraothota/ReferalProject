@@ -1,136 +1,102 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import Logo from '../images/logo.png';
-import { Link } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import Playstore from '../images/Playstore.png';
-import Appstore from '../images/Appstore.png';
-
-
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import logo from "../images/logo.png";
+import { BrowserRouter, Link } from  "react-router-dom";
+import  PlayStore  from "../images/Playstore.png";
+import  Appstore from "../images/Appstore.png";
+import * as icon from "react-bootstrap-icons";
 
 const Footer = () => {
-    return (
-        <Box
-            bgcolor="text.secondary"
-            color="white"
-        >
-            <Grid container spacing={1}>
-                <Grid item xs={12} sm={4}>
-                    <Item>
-                        <img src={Logo} alt='logo' />
-                    </Item>
-                </Grid>
-                <Grid item xs={4} sm={1}>
-                    <Box>
-                        <Link href='/' color="inherit">Pages</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Courses</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Freebies</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Paths</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Deals</Link>
-                    </Box>
-                </Grid>
-                <Grid item xs={4} sm={1}>
-                    <Box>
-                        <Link href='/' color="inherit">ABOUT</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">About Us</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Contact Us</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Terms & Conditions</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Infinit T&C</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Instructors Policy</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Private Policy</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">FAQ</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Sitemap</Link>
-                    </Box>
-                </Grid>
-                <Grid item xs={4} sm={1}>
-                    <Box>
-                        <Link href='/' color="inherit">HELPFUL LINKS</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Gift Voucher</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Our Webblog</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Affiliates</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Teach For Us</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Opportunities</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">Corporate Training</Link>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Box>
-                        <Link href='/' color="inherit">JOIN US</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit"><FacebookIcon /></Link>
-                        <Link href='/' color="inherit"><TwitterIcon /></Link>
-                        <Link href='/' color="inherit"><YouTubeIcon /></Link>
-                        <Link href='/' color="inherit"><LinkedInIcon /></Link>
-                        <Link href='/' color="inherit"><InstagramIcon /></Link>
-                    </Box>
-                    <Box>
-                        <Link href='/' color="inherit">DOWNLOAD OUR APP</Link>
-                    </Box>
-                    <Box>
-                        <Link href='/'><img src={Playstore} alt='playstore' /></Link>
-                    </Box>
-                    <Box>
-                        <Link href='/'><img src={Appstore} alt='appstore' /></Link>
-                    </Box>
-
-                </Grid>
-            </Grid>
-            <Box textAlign="center" backgroundColor="black" pt={{ xs: 1 }} pb={{ xs: 1 }}>
-                &copy;2022 Eduonix Learning Solutions Pvt Ltd.All Rights Reserved
-            </Box>
-        </Box>
-    );
-}
+  return (
+    <div>
+      <div className="main-footer p-3 bg-secondary text-white">
+        <Container>
+          <Row>
+            <Col>
+              <img
+                src={logo}
+                width="150"
+                height="70"
+                className="d-inline-block align-top"
+                alt="logo"
+              />
+            </Col>         
+        
+            <Col sm={2}>
+              <h5>PAGES</h5>
+              
+              <ul className="list-unstyled">
+                <li>Courses</li>
+                <li>Freebies</li>
+                <li>E-Degrees</li>
+                <li>Paths</li>
+                <li>Deals</li>
+                <li>Upcoming Courses</li>
+              </ul>
+              </Col>
+            <Col sm={2}>
+              <h5>ABOUT</h5>
+              <ul className="list-unstyled">
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Terms & Conditions</li>
+                <li>Infiniti T&C</li>
+                <li>Instructors policy</li>
+                <li>Privacy policy</li>
+                <li>FAQ</li>
+                <li>Sitemap</li>
+              </ul>
+            </Col>
+            <Col sm={2}>
+              <h5>HELPFUL LINKS</h5>
+              <ul className="list-unstyled">
+                <li>Gift Voucher</li>
+                <li>Our Webblog</li>
+                <li>Affiliates</li>
+                <li>Teach For Us</li>
+                <li>Opportunities</li>
+                <li>Corporate Training</li>
+              </ul>
+            </Col>         
+            <Col>
+          
+            <h5>JOIN US</h5>
+            <div className="d-flex gap-2 mb-2">
+            <icon.Facebook size={24} className="class-icons" />
+            <icon.Twitter size={24} className="class-icons" />
+            <icon.Youtube size={24} className="class-icons" />
+            <icon.Linkedin size={24} className="class-icons" />
+            <icon.Instagram size={24} className="class-icons" />
+            </div>
+          
+            <h5>DOWNLOAD OUR APP</h5>
+            <img
+                src={PlayStore}
+                width="150"
+                height="70"
+                className="d-inline-block align-top"
+                alt="Playstore"
+              />
+              <img
+                src={Appstore}
+                width="150"
+                height="70"
+                className="d-inline-block align-top"
+                alt="Appstore"
+              />
+          </Col>
+          </Row>
+        </Container>
+      </div>
+      <div className="mini-footer p-3 bg-dark text-white">
+        <Container>
+          <p className="text-center ">
+            &#169;2022 Edunoix Learing Solutions Pvt Ltd.All Rights Reserved.
+          </p>
+        </Container>
+      </div>
+    </div>
+  );
+};
 
 export default Footer;
